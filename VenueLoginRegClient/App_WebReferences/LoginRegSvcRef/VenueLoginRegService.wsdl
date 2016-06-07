@@ -37,6 +37,18 @@
   <wsdl:message name="IVenueLoginRegService_AddArtist_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddArtistResponse" />
   </wsdl:message>
+  <wsdl:message name="IVenueLoginRegService_GetArtistKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtistKey" />
+  </wsdl:message>
+  <wsdl:message name="IVenueLoginRegService_GetArtistKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArtistKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVenueLoginRegService_GetShowKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowKey" />
+  </wsdl:message>
+  <wsdl:message name="IVenueLoginRegService_GetShowKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowKeyResponse" />
+  </wsdl:message>
   <wsdl:portType name="IVenueLoginRegService">
     <wsdl:operation name="RegisterVenue">
       <wsdl:input wsaw:Action="http://tempuri.org/IVenueLoginRegService/RegisterVenue" message="tns:IVenueLoginRegService_RegisterVenue_InputMessage" />
@@ -57,6 +69,14 @@
     <wsdl:operation name="AddArtist">
       <wsdl:input wsaw:Action="http://tempuri.org/IVenueLoginRegService/AddArtist" message="tns:IVenueLoginRegService_AddArtist_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IVenueLoginRegService/AddArtistResponse" message="tns:IVenueLoginRegService_AddArtist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArtistKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVenueLoginRegService/GetArtistKey" message="tns:IVenueLoginRegService_GetArtistKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVenueLoginRegService/GetArtistKeyResponse" message="tns:IVenueLoginRegService_GetArtistKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVenueLoginRegService/GetShowKey" message="tns:IVenueLoginRegService_GetShowKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVenueLoginRegService/GetShowKeyResponse" message="tns:IVenueLoginRegService_GetShowKey_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IVenueLoginRegService" type="tns:IVenueLoginRegService">
@@ -99,6 +119,24 @@
     </wsdl:operation>
     <wsdl:operation name="AddArtist">
       <soap:operation soapAction="http://tempuri.org/IVenueLoginRegService/AddArtist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArtistKey">
+      <soap:operation soapAction="http://tempuri.org/IVenueLoginRegService/GetArtistKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowKey">
+      <soap:operation soapAction="http://tempuri.org/IVenueLoginRegService/GetShowKey" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
